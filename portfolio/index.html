@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sebastian Schneider – 3D Artist</title>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <nav class="navbar">
+        <a class="logo" href="./">LOGO</a>
+
+        <div class="navbar_buttons">
+          <a class="navbar_link" href="#projects"> Projects </a>
+          <a class="navbar_link" href="#about"> About </a>
+          <button id="contact-open" class="navbar_link" type="button">
+            Contact
+          </button>
+        </div>
+
+        <div class="navbar_theme">
+          <button id="theme-switch" aria-label="Theme wechseln">
+            <img
+              id="theme-icon"
+              src="./icons/moon.svg"
+              alt="kleiner Mond"
+              width="20"
+              height="20"
+            />
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="content">
+      <section class="hero">
+        <h1>Sebastian Schneider</h1>
+        <p>3D Animation und Rendering</p>
+      </section>
+
+      <section id="hint">
+        <a id="scroll" href="#" class="scroll-link">
+          <h2>
+            <img
+              src="/icons/arrow.svg"
+              alt="Pfeil nach unten"
+              width="20"
+              height="20"
+            />
+            MY WORK
+          </h2>
+        </a>
+      </section>
+
+      <!--- Projekte -->
+      <section id="projects">
+        <div class="section-head">
+          <h2>PORTFOLIO</h2>
+          <p class="section-sub">A curated selection of my Projects.</p>
+        </div>
+
+        <div class="grid">
+          <!----- Projekte hier ablegen----->
+
+          <a
+            class="card"
+            href="./architecture.html"
+            data-project="architecture"
+          >
+            <div class="thumb">
+              <img
+                src="/thumbnails/render_day_time.png"
+                alt="Innenraum Render"
+              />
+            </div>
+
+            <span class="date">April 2025</span>
+
+            <div class="meta">
+              <span class="title"> Light Study </span>
+              <span class="category"> MAYA • VRAY • RENDERING </span>
+            </div>
+          </a>
+
+          <!--- erstes Projekt -->
+
+          <a class="card" href="#">
+            <div class="thumb">
+              <img src="/thumbnails/candle.png" alt="Kleine Kerze" />
+            </div>
+
+            <span class="date">Dezember 2025</span>
+
+            <div class="meta">
+              <span class="title"> Small Candle </span>
+              <span class="category"> MAYA • ARNOLD • Challenge </span>
+            </div>
+          </a>
+
+          <a class="card" href="#">
+            <div class="thumb">
+              <img src="/thumbnails/only_lamps.png" alt="Stuhl mit Lampen" />
+            </div>
+
+            <span class="date">Juni 2022</span>
+
+            <div class="meta">
+              <span class="title"> Industiral Armchair </span>
+              <span class="category"> MAYA • ARNOLD • Rendering </span>
+            </div>
+          </a>
+
+          <a class="card" href="#">
+            <div class="thumb">
+              <img src="/thumbnails/test_image.jpg" alt="Mery Animation Test" />
+            </div>
+
+            <span class="date">November 2022</span>
+
+            <div class="meta">
+              <span class="title"> Character Animation </span>
+              <span class="category"> MAYA • ARNOLD • Animation </span>
+            </div>
+          </a>
+
+          <!----- grid Ende ----->
+        </div>
+      </section>
+
+      <section id="about">
+        <h2>About</h2>
+        <p>
+          Hello i am a Student. <br />
+          Please be nice :)
+        </p>
+      </section>
+    </main>
+
+    <!-- Contact Menu -->
+    <div class="menu" id="menu" aria-hidden="true">
+      <button class="menu_close" id="menu-close" aria-label="Close menu">
+        x
+      </button>
+
+      <div class="menu_grid">
+        <div>
+          <div class="menu_kicker">Contact</div>
+
+          <a class="menu_mail" href="mailto:me"> platzhalter@email.com </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Contact Menu Ende -->
+    <footer class="site-footer">
+      <p>© 2025 Sebastian Schneider</p>
+
+      <nav class="footer-links">
+        <a href="#">Platzhalter</a>
+      </nav>
+    </footer>
+  </body>
+</html>

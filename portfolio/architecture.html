@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sebastian Schneider – 3D Artist</title>
+    <script type="module" src="./src/main.js"></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <nav class="navbar">
+        <a class="logo" href="./">LOGO</a>
+
+        <div class="navbar_buttons">
+          <a class="navbar_link" href="./#projects"> Projects </a>
+          <a class="navbar_link" href="./#about"> About </a>
+          <button id="contact-open" class="navbar_link" type="button">
+            Contact
+          </button>
+        </div>
+
+        <div class="navbar_theme">
+          <button id="theme-switch" aria-label="Theme wechseln">
+            <img
+              id="theme-icon"
+              src="./icons/moon.svg"
+              alt="kleiner Mond"
+              width="20"
+              height="20"
+            />
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="project">
+      <aside class="project-hero">
+        <!-- Linke Seite -->
+        <div class="kicker">MIB37 Fotorealistisches Rendering</div>
+        <h1>Light Study</h1>
+      </aside>
+      <!-- Rechte Seite -->
+      <section class="project-info">
+        <div class="media">
+          <img src="/renders/render_day_time.png" alt="Render Tag" />
+        </div>
+
+        <h3>Technology</h3>
+        <ul class="project-facts">
+          <li>maya</li>
+          <li>•</li>
+          <li>vray</li>
+          <li>•</li>
+          <li>3d</li>
+        </ul>
+        <h2>Description</h2>
+        <p>
+          This project is an interior lighting study exploring the contrast
+          between daytime and evening atmospheres. Sun and camera were keyframed
+          to represent two distinct lighting conditions, focusing on how natural
+          and artificial light shape spatial perception. Ceiling downlights were
+          set up as instances to ensure consistent behavior across the scene,
+          allowing precise control over mood and illumination.
+        </p>
+        <div class="media">
+          <img src="/renders/render_night_time.png" alt="Render Nacht" />
+          <img src="/thumbnails/empty.png" alt="Start" />
+          <img src="/renders/Test_Render_5.png" alt="Render 5" />
+          <img src="/renders/Test_Render_9.png" alt="Render 9" />
+          <img src="/renders/Test_Render_6.png" alt="Render 6" />
+        </div>
+      </section>
+    </main>
+
+    <!-- Contact Menu -->
+    <div class="menu" id="menu" aria-hidden="true">
+      <button class="menu_close" id="menu-close" aria-label="Close menu">
+        x
+      </button>
+
+      <div class="menu_grid">
+        <div>
+          <div class="menu_kicker">Contact</div>
+          <a class="menu_mail" href="mailto:me"> platzhalter@email.com </a>
+        </div>
+      </div>
+    </div>
+    <!-- Contact Menu Ende -->
+
+    <footer class="site-footer">
+      <p>© 2025 Sebastian Schneider</p>
+
+      <nav class="footer-links">
+        <a href="#">Platzhalter</a>
+      </nav>
+    </footer>
+  </body>
+</html>
