@@ -1,14 +1,6 @@
 import { defineConfig } from "vite";
-import { resolve } from "path";
 
 export default defineConfig({
-  base: "./",
-  build: {
-    rollupOptions: {
-      input: {
-        main: resolve(__dirname, "index.html"),
-        architecture: resolve(__dirname, "architecture.html"),
-      },
-    },
-  },
+  base: "/Portfolio-Webseite/", // exakt Repo-Name mit Slashes
 });
+
