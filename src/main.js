@@ -1,4 +1,4 @@
-import "./style.css";
+import "../src/style.css";
 
 import { initThemeToggle } from "./theme-toggle.js";
 import { smoothScrollTo } from "./scroll.js";
