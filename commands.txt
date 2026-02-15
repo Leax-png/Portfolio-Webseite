@@ -1,0 +1,13 @@
+# Server starten
+npm run dev
+
+# Production Build
+npm run build 
+
+# Preview Build 
+npm run preview
+
+# Auf Git pushen
+git add .
+git commit -m "Update"
+git push 

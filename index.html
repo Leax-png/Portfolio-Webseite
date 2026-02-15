@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
@@ -34,15 +34,18 @@
       </nav>
     </header>
 
-    <main class="content">
-      <section class="hero">
+    <section class="hero" id="top">
+       <div class="hero-slide is-active" style="background-image:url('/public/renders/overcast_sky.png')"></div>
+        <div class="hero-slide" style="background-image:url('/public/renders/render_day_time.png')"></div>
+        <div class="hero-slide" style="background-image:url('/public/renders/final_grass.png')"></div>
+
+      <div class="hero-content">
         <h1>Sebastian Schneider</h1>
         <p>3D Animation und Rendering</p>
-      </section>
-
-      <section id="hint">
-        <a id="scroll" href="#" class="scroll-link">
-          <h2>
+      </div>
+      <div class="overlay"></div>
+      <h2>
+        <a id="scroll" href="#" class="scroll-link">  
             <img
               src="/icons/arrow.svg"
               alt="Pfeil nach unten"
@@ -52,7 +55,9 @@
             MY WORK
           </h2>
         </a>
-      </section>
+    </section>
+
+    <main class="content">
 
       <!--- Projekte -->
       <section id="projects">
@@ -152,7 +157,7 @@
         </div>
       </div>
     </div>
-    
+
     <!-- Contact Menu Ende -->
     <footer class="site-footer">
       <p>© 2025 Sebastian Schneider</p>

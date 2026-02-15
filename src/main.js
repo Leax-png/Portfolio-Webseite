@@ -7,6 +7,16 @@ document.addEventListener("DOMContentLoaded", () => {
   /* === Theme === */
   initThemeToggle();
 
+  /* === Slides === */ 
+  const slides = document.querySelectorAll(".hero-slide");
+  let current = 0;
+
+  setInterval(() => {
+    slides[current].classList.remove("is-active");
+    current = (current + 1) % slides.length;
+    slides[current].classList.add("is-active");
+  }, 12000);
+
   /* === Scroll === */
   const link = document.querySelector("#scroll");
   const target = document.querySelector("#projects");
@@ -17,6 +27,19 @@ document.addEventListener("DOMContentLoaded", () => {
       smoothScrollTo(target, 1000); // Dauer in ms
     });
   }
+
+  /* === Navbar Scroll === */ 
+   const nav = document.querySelector(".navbar");
+   if (!nav) return;
+
+   const threshold = 40;
+
+   const updateNav = () => {
+     nav.classList.toggle("is-scrolled", window.scrollY > threshold);
+   };
+
+   updateNav();
+   window.addEventListener("scroll", updateNav, { passive: true });
 
   /* === Contact Menu === */
   const menu = document.getElementById("menu");
