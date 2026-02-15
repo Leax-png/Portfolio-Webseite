@@ -655,7 +655,7 @@ textarea {
 /* ========================= Footer ========================= */
 .site-footer {
   display: flex;
-  gap: 1.5rem;
+  gap: 3rem;
   padding: 0 1rem 1rem;
 }
 
@@ -666,7 +666,10 @@ textarea {
 
 .footer-links {
   display: flex;
-  gap: 1.5rem;
+  gap: inherit; 
+}
+.footer-links a{
+  text-decoration: none;
 }
 
 /* ========================= Mobile Focus ========================= */
