@@ -13,7 +13,7 @@
   --bg: 8, 10, 14;
   --text: 255 255 255;
   --accent: 10 255 10;
-  --independent: 255 255 255; 
+  --independent: 255 255 255;
 
   --text-strong: 1; /* opacity */
   --text-body: 0.88;
@@ -37,7 +37,7 @@
 }
 
 body.theme-light {
-  --bg: 250, 250, 250;
+  --bg: 242, 240, 236;
   --text: 8 10 14;
 
   --text-body: 0.92;
@@ -122,25 +122,27 @@ a {
   align-items: center;
   z-index: 1000; /* verschwindet sonst hinter Projekten */
 
-  transition: background 200ms ease, backdrop-filter 200ms ease, padding 200ms ease; 
-  color: rgb(var(--independent)); 
-  background: transparent; 
+  transition:
+    background 200ms ease,
+    backdrop-filter 200ms ease,
+    padding 200ms ease;
+  color: rgb(var(--independent));
+  background: transparent;
 }
 
 .navbar.is-scrolled {
   background: rgb(var(--bg) / 0.85);
   backdrop-filter: blur(10px);
-  padding-top: 1.5rem;         /* optional: kompakter */
+  padding-top: 1.5rem; /* optional: kompakter */
   padding-bottom: 1.5rem;
-  color: rgb(var(--text));      /* jetzt Theme-Text */
+  color: rgb(var(--text)); /* jetzt Theme-Text */
   border-bottom: 1px solid rgb(255 255 255 / 0.08);
 }
-
 
 .navbar .logo,
 .navbar .navbar_link,
 .navbar #theme-switch {
-  color: inherit; 
+  color: inherit;
 }
 
 .logo {
@@ -164,7 +166,7 @@ a {
   position: relative;
   display: inline-block;
   text-decoration: none;
-  color: inherit; 
+  color: inherit;
   opacity: var(--text-body);
 
   transition:
@@ -229,8 +231,7 @@ a {
   opacity: 1;
 }
 
-/* === Ergänzung Navbar === */ 
-
+/* === Ergänzung Navbar === */
 
 /* ========================= Hero ========================= */
 
@@ -240,21 +241,21 @@ a {
   display: grid;
   place-items: center;
   text-align: center;
-  color: #fff; /* immer weiß */ 
-  overflow: hidden; 
+  color: #fff; /* immer weiß */
+  overflow: hidden;
 }
 
 .hero-slide {
-  position: absolute; 
-  inset: 0; 
+  position: absolute;
+  inset: 0;
   background-size: cover;
   background-position: center;
   opacity: 0;
-  transition: opacity 4s ease; 
+  transition: opacity 4s ease;
 }
 
 .hero-slide.is-active {
-  opacity: 1; 
+  opacity: 1;
 }
 
 .overlay {
@@ -291,8 +292,8 @@ a {
 /* ========================= Sections ========================= */
 
 .section-head {
-  display: grid; 
-  gap: 0.35rem; 
+  display: grid;
+  gap: 0.35rem;
   margin-bottom: 1.5rem;
 }
 
@@ -398,11 +399,16 @@ a {
 .menu {
   position: fixed;
   inset: 0;
-  background: rgb(var(--bg) / 0.9);
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+
+  background: rgba(var(--bg), 0.9);
   opacity: 0;
   pointer-events: none;
   transition: opacity 200ms ease;
   z-index: 9999;
+  overflow: hidden; 
 }
 
 .menu.is-open {
@@ -424,20 +430,24 @@ a {
 }
 
 .menu_grid {
-  height: 100%;
-  padding: 6rem 5rem;
+  width: min(1100px, 92vw);
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 320px 1fr;  
   gap: 4rem;
-  align-content: start;
+  align-items: start;
+
+  padding: 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
 }
 
 .menu_kicker {
-  font-size: 0.75rem;
+  font-size: 1.5rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   opacity: 0.6;
-  margin-bottom: 1.5rem;
 }
 
 .menu_mail {
@@ -446,6 +456,114 @@ a {
   border-bottom: 1px solid currentColor;
   padding-bottom: 0.2rem;
   opacity: 0.9;
+}
+
+/* ========================= Contact* ========================= */
+.contact_left {
+  display: flex; 
+  flex-direction: column;
+  gap: 2rem; 
+  padding-top: 0.5rem;
+}
+
+.contact_socials {
+  display: flex;
+  gap: 1rem;
+}
+
+/* === Icons === */ 
+.contact_socials img {
+  width: 24px;
+  height: 24px;
+  display: block; 
+
+  opacity: 0.7;
+  transition: 0.2s ease;
+  filter: invert(1); 
+  opacity: 0.9; 
+}
+/* === ende Icons === */
+
+.contact_socials a{
+  text-decoration: none; 
+  padding: 0.55rem 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px; 
+  opacity:  0.85; 
+
+  display: inline-flex; 
+  align-items: center;
+  gap: 0.6rem; 
+}
+
+.contact_socuals a:hover{
+  border-color: white; 
+  background: rgba(0, 0, 0, 0.15);
+  opacity: 1; 
+}
+
+.contact_socials img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.contact_form {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  background: rgba(var(--bg) 0.08);
+  min-width: 320px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form_row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.form_row input {
+  flex: 1;
+}
+
+input,
+textarea {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  color: #fff;
+  font: inherit;
+}
+
+textarea {
+  resize: vertical;
+  max-height: 40vh; 
+  min-height: 180px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.form_btn {
+  width: fit-content;
+  padding: 0.8rem 2rem;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.form_btn:hover {
+  background: white;
+  color: black;
 }
 
 /* ========================= Project Page ========================= */
@@ -520,6 +638,18 @@ a {
   max-width: 100%;
   border-radius: var(--radius-media);
   margin-bottom: 2.5rem;
+}
+
+/* ========================= About ========================= */
+#about {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+#about p {
+  line-height: 1.7;
+  opacity: 0.9;
 }
 
 /* ========================= Footer ========================= */
@@ -638,5 +768,13 @@ a:focus:not(:focus-visible) {
 
   .project-info .media img {
     margin-bottom: 1rem;
+  }
+  .menu_grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 6vh;
+  }
+  .form_row {
+    grid-template-columns: 1fr;
   }
 }

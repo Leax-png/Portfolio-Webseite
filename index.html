@@ -35,9 +35,18 @@
     </header>
 
     <section class="hero" id="top">
-       <div class="hero-slide is-active" style="background-image:url('/renders/overcast_sky.png')"></div>
-        <div class="hero-slide" style="background-image:url('/renders/render_day_time.png')"></div>
-        <div class="hero-slide" style="background-image:url('/renders/final_grass.png')"></div>
+      <div
+        class="hero-slide is-active"
+        style="background-image: url(&quot;/renders/overcast_sky.png&quot;)"
+      ></div>
+      <div
+        class="hero-slide"
+        style="background-image: url(&quot;/renders/render_day_time.png&quot;)"
+      ></div>
+      <div
+        class="hero-slide"
+        style="background-image: url(&quot;/renders/final_grass.png&quot;)"
+      ></div>
 
       <div class="hero-content">
         <h1>Sebastian Schneider</h1>
@@ -45,20 +54,19 @@
       </div>
       <div class="overlay"></div>
       <h2>
-        <a id="scroll" href="#" class="scroll-link">  
-            <img
-              src="/icons/arrow.svg"
-              alt="Pfeil nach unten"
-              width="20"
-              height="20"
-            />
-            MY WORK
-          </h2>
+        <a id="scroll" href="#" class="scroll-link">
+          <img
+            src="/icons/arrow.svg"
+            alt="Pfeil nach unten"
+            width="20"
+            height="20"
+          />
+          MY WORK
         </a>
+      </h2>
     </section>
 
     <main class="content">
-
       <!--- Projekte -->
       <section id="projects">
         <div class="section-head">
@@ -134,12 +142,18 @@
         </div>
       </section>
 
-      <section id="about">
+      <section id="about" class="about">
         <h2>About</h2>
-        <p>
-          Hello i am a Student. <br />
-          Please be nice :)
-        </p>
+
+        <div class="about-grid">
+          <p class="about-text">
+            Ich studiere Medieninformatik an der THM in Friedberg mit
+            Schwerpunkt auf 3D-Animation und Rendering. Mein Fokus liegt auf der
+            Verbindung von technischer Präzision und visueller Gestaltung. Mit
+            Maya, V-Ray und Arnold entwickle ich atmosphärische, technisch
+            saubere Visualisierungen.
+          </p>
+        </div>
       </section>
     </main>
 
@@ -150,17 +164,45 @@
       </button>
 
       <div class="menu_grid">
-        <div>
+        <!-- left -->
+        <div class="contact_left">
           <div class="menu_kicker">Contact</div>
+          <!-- <a class="menu_mail" href="mailto:sebastian.schneider-3@iem.thm.de"> sebastian.schneider-3@iem.thm.de </a> -->
+          <p> Hinter lass mir eine Nachricht und ich melde mich in kürze bei dir zurück! :)</p>
+          
+          <div class="menu_kicker">Folg mir auf: </div>
 
-          <a class="menu_mail" href="mailto:me"> platzhalter@email.com </a>
+          <div class="contact_socials">
+            <a href="#" target="_blank">
+              <img src="/icons/instagram.svg" alt="Instagram" />
+              Instagram
+            </a>
+
+            <a href="#" target="_blank">
+              <img src="/icons/github.svg" alt="Github" />
+              Github
+            </a>
+          </div>
+        </div>
+        <!-- rght -->
+        <div class="contact_form">
+          <form class="form">
+            <div class="form_row">
+              <input type="text" placeholder="Dein Name" required />
+              <input type="email" placeholder="Email" required />
+            </div>
+
+            <textarea placeholder="Dieses Formular ist noch nicht verbunden :(" rows="6" required></textarea>
+
+            <button type="submit" class="form_btn">Send</button>
+          </form>
         </div>
       </div>
     </div>
-
     <!-- Contact Menu Ende -->
+
     <footer class="site-footer">
-      <p>© 2025 Sebastian Schneider</p>
+      <p>© All Rights Reserved 2025 | Sebastian Schneider</p>
 
       <nav class="footer-links">
         <a href="#">Platzhalter</a>
