@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
@@ -15,9 +15,7 @@
         <div class="navbar_buttons">
           <a class="navbar_link" href="./#projects"> Projects </a>
           <a class="navbar_link" href="./#about"> About </a>
-          <button id="contact-open" class="navbar_link" type="button">
-            Contact
-          </button>
+          <a id="contact-open" class="navbar_link" href="#"> Contact </a>
         </div>
 
         <div class="navbar_theme">
@@ -73,21 +71,6 @@
       </section>
     </main>
 
-    <!-- Contact Menu -->
-    <div class="menu" id="menu" aria-hidden="true">
-      <button class="menu_close" id="menu-close" aria-label="Close menu">
-        x
-      </button>
-
-      <div class="menu_grid">
-        <div>
-          <div class="menu_kicker">Contact</div>
-          <a class="menu_mail" href="mailto:me"> platzhalter@email.com </a>
-        </div>
-      </div>
-    </div>
-    <!-- Contact Menu Ende -->
-
     <footer class="site-footer">
       <p>© 2025 Sebastian Schneider</p>
 
@@ -95,5 +78,8 @@
         <a href="#">Platzhalter</a>
       </nav>
     </footer>
+    
+    <!-- Contact Menu -->
+    <div id="contact-root"></div>
   </body>
 </html>
