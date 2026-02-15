@@ -8,6 +8,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, "index.html"),
         architecture: resolve(__dirname, "architecture.html"),
+        construction: resolve(__dirname, "construction.html"),
       },
     },
   },
